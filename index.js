@@ -1,4 +1,4 @@
-const VERSION = "1.0.0";
+const VERSION = "1.0.1";
 
 const endpoint = () => {
   if (typeof process !== "undefined") return process.env?.TELESINK_ENDPOINT;
