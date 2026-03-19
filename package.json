@@ -1,0 +1,31 @@
+{
+  "name": "telesink",
+  "version": "1.0.0",
+  "description": "Official JavaScript SDK for Telesink — real-time event tracking",
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/telesink/telesink-javascript.git"
+  },
+  "keywords": [
+    "telesink",
+    "event-tracking",
+    "analytics",
+    "real-time",
+    "monitoring",
+    "notifications",
+    "sdk"
+  ],
+  "author": "Kyrylo Silin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/telesink/telesink-javascript/issues"
+  },
+  "homepage": "https://github.com/telesink/telesink-javascript#readme"
+}
