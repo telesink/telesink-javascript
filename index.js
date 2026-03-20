@@ -50,7 +50,7 @@ const track = async ({
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "User-Agent": `telesink/${VERSION}`,
+        "User-Agent": `telesink.javascript/${VERSION}`,
         "Idempotency-Key": payload.idempotency_key,
       },
       body: JSON.stringify(payload),
