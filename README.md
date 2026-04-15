@@ -53,7 +53,7 @@ export TELESINK_DISABLED=true
 import telesink from "telesink";
 
 telesink.track({
-  event: "user.signed.up",
+  event: "User signed up",
   text: "user@example.com",
   emoji: "👤",
   properties: {
