@@ -27,8 +27,11 @@ const track = async ({
   properties = {},
   occurredAt,
   idempotencyKey,
+  endpoint: overrideEndpoint,
 } = {}) => {
-  if (!enabled() || !endpoint()) return false;
+  const finalEndpoint = overrideEndpoint ?? endpoint();
+
+  if (!enabled() || !finalEndpoint) return false;
 
   const payload = Object.fromEntries(
     Object.entries({
@@ -46,7 +49,7 @@ const track = async ({
   const timeout = setTimeout(() => controller.abort(), 3000);
 
   try {
-    const res = await fetch(endpoint(), {
+    const res = await fetch(finalEndpoint, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

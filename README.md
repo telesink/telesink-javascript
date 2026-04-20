@@ -86,6 +86,20 @@ telesink.track({
 </script>
 ```
 
+#### Override endpoint
+
+You can pass an `endpoint` property to send the event to a different sink (takes
+precedence over `TELESINK_ENDPOINT` / `window.TELESINK_ENDPOINT`):
+
+```js
+telesink.track({
+  event: "Job succeeded",
+  text: "ProcessUserData",
+  emoji: "✅",
+  properties: { duration_ms: 420 },
+  endpoint: process.env.TELESINK_TEST_ENDPOINT, // or window.TELESINK_TEST_ENDPOINT in browser
+});
+
 #### Returns
 
 - `true` — event sent successfully
@@ -94,3 +108,4 @@ telesink.track({
 ### License
 
 MIT (see [LICENSE.md](/LICENSE.md)).
+```
